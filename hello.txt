@@ -1,0 +1,38 @@
+Hello Everyone welcome to the series hello git.
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS E:\Learning Git> git init
+Initialized empty Git repository in E:/Learning Git/.git/
+PS E:\Learning Git> ls
+
+
+    Directory: E:\Learning Git
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        18-02-2022     15:31             47 hello.txt
+
+PS E:\Learning Git> git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track) 
+PS E:\Learning Git> git add hello.txt
+PS E:\Learning Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+PS E:\Learning Git>
