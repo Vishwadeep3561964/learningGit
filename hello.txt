@@ -15,6 +15,29 @@ Mode                 LastWriteTime         Length Name
 ----                 -------------         ------ ----
 -a----        18-02-2022     15:31             47 hello.txt
 
+
+PS E:\Learning Git> ls -a
+Get-ChildItem : Parameter cannot be processed because the parameter name 
+'a' is ambiguous. Possible matches include: -Attributes -Directory -File     
+-Hidden -ReadOnly -System.
+At line:1 char:4
++ ls -a
++    ~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-ChildItem], Paramet  
+   erBindingException
+    + FullyQualifiedErrorId : AmbiguousParameter,Microsoft.PowerShell.Comma  
+   nds.GetChildItemCommand
+
+PS E:\Learning Git> ls --a
+ls : Cannot find path 'E:\Learning Git\--a' because it does not exist.
+At line:1 char:1
++ ls --a
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (E:\Learning Git\--a:String)   
+   [Get-ChildItem], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.Ge  
+   tChildItemCommand
+
 PS E:\Learning Git> git status
 On branch master
 
@@ -35,4 +58,53 @@ Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
         new file:   hello.txt
 
-PS E:\Learning Git>
+PS E:\Learning Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)      
+        modified:   hello.txt
+
+PS E:\Learning Git> git add .
+PS E:\Learning Git> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+PS E:\Learning Git> git commit -m "added cmds"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'shukl@LAPTOP-G961BPLU.(none)')
+PS E:\Learning Git> git config user.email "shuklarpit2015@gmail.com"         
+PS E:\Learning Git> git congig use.name "Arpit5031212"
+git: 'congig' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+PS E:\Learning Git> git config use.name "Arpit5031212"
+PS E:\Learning Git> git commit -m "added cmds"
+[master (root-commit) c9f2fd5] added cmds
+ 1 file changed, 38 insertions(+)
+ create mode 100644 hello.txt
+PS E:\Learning Git> 
